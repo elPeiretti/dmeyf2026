@@ -61,9 +61,9 @@ PARAM$TRAINING_PCT$metodo <- "training_1_0"
 ```r
 PARAM$CA$metodo= "MachineLearning" 
 
-PARAM$DR$metodo <- "estandarizar"
+PARAM$DR$metodo <- "rank_cero_fijo"
 
-PARAM$INTRA_MENSUAL$metodo = "rank_cero_fijo"
+PARAM$INTRA_MENSUAL$metodo = "intra_mensual_true"
 PARAM$meses_excluidos <- c()
 
 PARAM$GENETIC$enabled <- "genetic_disabled" 
