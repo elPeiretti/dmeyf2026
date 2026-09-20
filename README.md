@@ -84,6 +84,7 @@ Luego, para uno de los experimentos que obtuvo mejor ganancia media, se realizar
 ![tabla de wilcox](./img/wilcox_final.png)
 
 
+![total de semillas](./img/semillas_utilizadas.png)
 
 #### Configuración de parámetros "ganadores"
 
