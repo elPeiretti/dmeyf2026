@@ -72,16 +72,20 @@ PARAM$trainingstrategy$training_pct <- 1.0
 PARAM$TRAINING_PCT$metodo <- "training_1_0"
 ```
 
-Por cada experimento se utilizarían 7 semillas lo que en total se traduce a **3x7x7 = 147 envíos a Kaggle** (49 por experimento). Además, se destinarían otros envíos a Kaggle para validar que la incorporación de experimentos de otros grupos funcione correctamente.
+Por cada experimento se utilzizaron 7 semillas lo que en total se traduce a **3x7x7 = 147 envíos a Kaggle** (49 por experimento). Además, se destinaron otros envíos a Kaggle para validar que la incorporación de experimentos de otros grupos funcione correctamente.
+
+Luego, para uno de los experimentos que obtuvo mejor ganancia media, se realizaron nuevas corridas utilizando distintas semillas. A partir de esto, se recopilaron los archivos correspondientes a las probabilidades predichas, se calculó el promedio de las predicciones para cada cliente y, finalmente, se realizó un último submit en Kaggle utilizando los cortes correspondientes.
+
+> Véase [kaggle_from_probability.ipynb](./src/kaggle_from_probability.ipynb) y [probability_merger.py](./src/probability_merger.py)
 
 ### Resultados
 
-Los resultados se encuentran INCOMPLETOS debido a un error durante la ejecución de los experimentos. En lugar de ejecutar el experimento B, se ejecutó por duplicado el experimento A, lo que provocó que se agotara la cantidad de submits disponibles en Kaggle. Por lo tanto, quedaré con la duda de si _Feature Engineering Intra-mes mediante Algoritmo Genético_ podría brindar una ganancia media mayor que los otros experimentos
-
 ![tabla de resultados](./img/ganancias_final.png)
+![tabla de wilcox](./img/wilcox_final.png)
 
 
-#### Configuración de parámetros """ganadores"""
+
+#### Configuración de parámetros "ganadores"
 
 ```r
 PARAM$CA$metodo= "MachineLearning" 
@@ -96,3 +100,4 @@ PARAM$GENETIC$enabled <- "genetic_disabled"
 PARAM$trainingstrategy$training_pct <- 1.0 
 PARAM$TRAINING_PCT$metodo <- "training_1_0"
 ```
+> Gana sobre la aplicación del algoritmo genético porque requiere menor tiempo de procesamiento
