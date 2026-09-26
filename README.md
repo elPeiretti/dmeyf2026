@@ -102,3 +102,13 @@ PARAM$trainingstrategy$training_pct <- 1.0
 PARAM$TRAINING_PCT$metodo <- "training_1_0"
 ```
 > Gana sobre la aplicación del algoritmo genético porque requiere menor tiempo de procesamiento
+
+
+### Prueba post-competencia
+
+Luego de que se dieran los resultados de la competencia, se probó hacer un ensemble de los diferentes experimentos ejecutados para validar si realmente hubiera sido una mejor opción que la seleccionada previamente.
+
+![resultado 49 semillas](./img/resultados_49_seed.png)
+![resultado ensemble modelos](./img/resultado_ensemble.png)
+
+Como se puede observar en las imágenes, MULTI_MODEL_ENSEMBLE hubiera logrado un mejor puntaje para el private score (columna izquierda). 82431 puntos sobre 76173.
